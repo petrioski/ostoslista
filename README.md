@@ -16,4 +16,6 @@ Harjoitustyön aiheena on yksinkertainen ostoslista, jossa käyttäjä voi luoda
 * käyttäjä voi muokata kategorioiden järjestystä
 * käyttäjä voi tarkastella yhteenvetotilastoja ostoshistoriastaan
 
+## Alustava tietokantakaavio
 
+(../extra/tietokantakaavio.svg)
