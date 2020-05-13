@@ -18,4 +18,4 @@ Harjoitustyön aiheena on yksinkertainen ostoslista, jossa käyttäjä voi luoda
 
 ## Alustava tietokantakaavio
 
-(../extra/tietokantakaavio.svg)
+![ostoslistan tietokantakaavio](/extra/tietokantakaavio.svg)
