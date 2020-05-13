@@ -1,0 +1,43 @@
+@startuml
+class kayttaja {
+    (pk) id: Integer
+    nimi: String
+    kayttajatunnus: String
+    salasana: String
+}
+
+class tuote {
+    (pk) id: Integer
+    (fk) kategoria_id: kategoria
+    nimi: String
+}
+
+class kategoria {
+    (pk) id: Integer
+    nimi: String
+}
+
+class ostoslista {
+    (pk) id: Integer
+    nimi: String
+    pvm: Date
+}
+
+class kayttajaOstoslista {
+    (fk) kayttaja_id: kayttaja
+    (fk) ostoslista_id: ostoslista
+}
+
+class ostoslistaTuote {
+    (fk) ostoslista_id: ostoslista
+    (fk) tuote_id: tuote
+    maara: Integer
+}
+
+tuote "*" -- "1" kategoria
+kayttaja "1" -- "*" kayttajaOstoslista
+ostoslista "1" -- "*" kayttajaOstoslista
+ostoslista "1" -- "*" ostoslistaTuote
+tuote "1" -- "*" ostoslistaTuote
+
+@endum
