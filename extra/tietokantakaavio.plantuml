@@ -1,4 +1,11 @@
 @startuml
+hide circle
+skinparam Shadowing false
+skinparam class {
+    backgroundColor GhostWhite
+}
+
+
 class kayttaja {
     (pk) id: Integer
     nimi: String
