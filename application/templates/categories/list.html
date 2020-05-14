@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <table>
+    <tr>
+      <th>Task</th>
+      <th>Done</th>
+    </tr>
+    {% for category in categories %}
+    <tr>
+      <td>{{ category.name }}</td>
+      <td>{{ category.id }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
