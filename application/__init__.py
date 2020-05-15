@@ -20,8 +20,10 @@ from application import views
 # Luetaan tietokantataulujen sqlalchemy-mallit
 from application.items import models
 from application.categories import models
+from application.lists import models
 
 from application.categories import views
+from application.lists import views
 
 # Luodaan lopulta tarvittavat tietokantataulut
 db.create_all()

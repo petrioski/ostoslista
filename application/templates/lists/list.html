@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <table>
+    <tr>
+      <th>Task</th>
+      <th>Id</th>
+      <th>Completed</th>
+      <th></th>
+    </tr>
+    {% for list in lists %}
+    <tr>
+      <td>{{ list.name }}</td>
+      <td>{{ list.id }}</td>
+      <td>{{ list.valmis }} </td>
+      <td>
+        <form method="POST" action="{{ url_for('lists_set_done', list_id=list.id) }}">
+          <input type="submit" value="Change status!"/>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
