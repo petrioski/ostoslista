@@ -2,10 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>TodoApp</title>
+    <title>Ostoslista</title>
   </head>
 
   <body>
+    <ul>
+      <li><a href="{{ url_for('lists_index') }}">List shopping lists</a></li>
+	    <li><a href="{{ url_for('lists_form') }}">Add a shopping list</a></li>
+      <li><a href="{{ url_for('categories_index') }}">List categories</a></li>
+	    <li><a href="{{ url_for('categories_form') }}">Add a category</a></li>
+    </ul>
+
     {% block body %}
       <p>
         Content.
