@@ -6,45 +6,49 @@ skinparam class {
 }
 
 
-class kayttaja {
+class user {
     (pk) id: Integer
-    nimi: String
-    kayttajatunnus: String
-    salasana: String
+    name: String
+    username: String
+    password: String
 }
 
-class tuote {
+class purchase {
+    (pk) id: Integer
+    (fk) item_id: item
+    amount: Integer
+    collected: Boolean
+}
+
+
+class item {
     (pk) id: Integer
     (fk) kategoria_id: kategoria
-    nimi: String
+    name: String
 }
 
-class kategoria {
+class category {
     (pk) id: Integer
-    nimi: String
+    name: String
 }
 
-class ostoslista {
+class list {
     (pk) id: Integer
-    nimi: String
-    pvm: Date
+    (fk) user_id: Integer
+    name: String
+    date: Date
+    completed: Boolean
 }
 
-class kayttajaOstoslista {
-    (fk) kayttaja_id: kayttaja
-    (fk) ostoslista_id: ostoslista
+class listPurchase	{
+    (fk) list_id: list
+    (fk) item_id: item
 }
 
-class ostoslistaTuote {
-    (fk) ostoslista_id: ostoslista
-    (fk) tuote_id: tuote
-    maara: Integer
-}
-
-tuote "*" -- "1" kategoria
-kayttaja "1" -- "*" kayttajaOstoslista
-ostoslista "1" -- "*" kayttajaOstoslista
-ostoslista "1" -- "*" ostoslistaTuote
-tuote "1" -- "*" ostoslistaTuote
+item "*" -- "1" category
+list "1" -- "*" user
+list "1" -- "*" listPurchase
+purchase "1" -- "*" listPurchase
+item "*" -- "1" purchase
 
 @endum
