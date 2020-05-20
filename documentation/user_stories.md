@@ -1,4 +1,5 @@
-## Tavoitellut toiminnallisuudet:
+# Tavoitellut toiminnallisuudet
+
 * ostolistalla on useampia käyttäjiä
 * uusi käyttäjä voi luoda käyttäjätunnuksen
 * käyttäjä voi kirjautua sisään ja ulos sovelluksesta

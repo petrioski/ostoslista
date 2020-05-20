@@ -1,3 +1,3 @@
-## Alustava tietokantakaavio
+# Alustava tietokantakaavio
 
 ![ostoslistan tietokantakaavio](../extra/tietokantakaavio.svg)
