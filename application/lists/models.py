@@ -1,12 +1,13 @@
 from application import db
+from application.models import Base
 
-class List(db.Model):
-    id = db.Column(db.Integer, primary_key = True)
-    date_created = db.Column(db.DateTime, default=db.func.current_timestamp())
-    date_modified = db.Column(db.DateTime, default=db.func.current_timestamp(), onupdate=db.func.current_timestamp())
-
+class List(Base):
     name = db.Column(db.String(500), nullable = False)
     valmis = db.Column(db.Boolean, nullable = False)
+
+    account_id = db.Column(db.Integer, db.ForeignKey('account.id'), nullable=False)
+    listPurchases = db.relationship("listPurchase", backref='list', lazy=True)
+    # purchases = db.relationship("Purchase", backref='list', lazy=True)
 
     def __init__(self, name):
         self.name = name
