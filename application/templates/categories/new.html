@@ -2,7 +2,19 @@
 
 {% block body %}
 <form method="POST" action="{{ url_for('categories_create') }}">
-  <input type="text" name="name"/>
-  <input type="submit" value="Add a new category"/>
+  <table>
+    <tr>
+      <td>
+        {{ form.name.label }}
+      </td>
+      <td>
+        {{ form.name }}
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input type="submit" value="Add a new category"/>
+      </td>
+    </tr>
 </form>
 {% endblock %}
