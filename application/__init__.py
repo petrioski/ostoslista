@@ -26,6 +26,8 @@ from application.items import models
 from application.categories import models
 from application.lists import models
 from application.auth import models
+from application.purchases import models
+from application.purchases import listPurchase
 
 from application.categories import views
 from application.lists import views
