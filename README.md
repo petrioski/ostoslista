@@ -12,3 +12,8 @@ Harjoitustyön aiheena on yksinkertainen ostoslista, jossa käyttäjä voi luoda
 ## Heroku
 
 [Sovellus Herokussa](https://tsoha-ostoslista.herokuapp.com/)
+
+### Demo-tunnukset
+
+käyttäjänimi: hello
+salasana: world
