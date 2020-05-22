@@ -1,5 +1,5 @@
 from flask import redirect, render_template, request, request, url_for
-from flask_login import login_required
+from flask_login import login_required, current_user
 
 from application import app
 from application import db
@@ -18,19 +18,16 @@ def lists_index():
 def lists_form():
     return render_template("lists/new.html", form = TaskForm())
 
-# @app.route("/lists/new/")
-# def lists_form():
-#     return render_template("lists/new.html")
 
 @app.route("/lists/<list_id>/", methods=["POST"])
 @login_required
 def lists_set_done(list_id):
     id = List.query.get(list_id)
 
-    if id.valmis == False:
-        id.valmis = True
+    if id.done == False:
+        id.done = True
     else:
-        id.valmis = False
+        id.done = False
 
     db.session().commit()
 
@@ -39,14 +36,14 @@ def lists_set_done(list_id):
 @app.route("/lists/", methods=["GET","POST"])
 @login_required
 def lists_create():
-    # shopping_list = List(request.form.get("name"))
     form = TaskForm(request.form)
 
     if not form.validate_on_submit():
         return render_template("/lists/new.html", form = form)
 
     shopping_list = List(form.name.data)
-    shopping_list.valmis = form.valmis.data
+    shopping_list.done = form.done.data
+    shopping_list.account_id = current_user.id
 
     db.session().add(shopping_list)
     db.session().commit()
