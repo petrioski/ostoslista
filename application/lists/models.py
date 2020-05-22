@@ -6,8 +6,7 @@ class List(Base):
     done = db.Column(db.Boolean, nullable = False)
 
     account_id = db.Column(db.Integer, db.ForeignKey('account.id'), nullable=False)
-    # listPurchases = db.relationship("listPurchase", backref='list', lazy=True)
-    # purchases = db.relationship("Purchase", backref='list', lazy=True)
+    purchases = db.relationship("Purchase", secondary="list_purchase")
 
     def __init__(self, name):
         self.name = name
