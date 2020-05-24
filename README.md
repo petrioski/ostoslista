@@ -13,7 +13,7 @@ Harjoitustyön aiheena on yksinkertainen ostoslista, jossa käyttäjä voi luoda
 
 [Sovellus Herokussa](https://tsoha-ostoslista.herokuapp.com/)
 
-### Demo-tunnukset
+## Demo-tunnukset
 
 käyttäjänimi: hello
 
