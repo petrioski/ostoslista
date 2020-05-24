@@ -16,4 +16,5 @@ Harjoitustyön aiheena on yksinkertainen ostoslista, jossa käyttäjä voi luoda
 ### Demo-tunnukset
 
 käyttäjänimi: hello
+
 salasana: world
