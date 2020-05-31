@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="412px" preserveAspectRatio="none" style="width:419px;height:412px;" version="1.1" viewBox="0 0 419 412" width="419px" zoomAndPan="magnify"><defs/><g><!--class user--><rect fill="#F8F8FF" height="91.1875" id="user" style="stroke: #A80036; stroke-width: 1.5;" width="111" x="12.5" y="310"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="28" x="54" y="326.1387">user</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="13.5" x2="122.5" y1="333.9688" y2="333.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="73" x="18.5" y="348.1792">name: String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="99" x="18.5" y="360.9839">username: String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="97" x="18.5" y="373.7886">password: String</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="13.5" x2="122.5" y1="380.3828" y2="380.3828"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="18.5" y="394.5933">(pk) id: Integer</text><!--class purchase--><rect fill="#F8F8FF" height="91.1875" id="purchase" style="stroke: #A80036; stroke-width: 1.5;" width="115" x="165.5" y="152.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="59" x="193.5" y="168.6387">purchase</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="166.5" x2="279.5" y1="176.4688" y2="176.4688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="90" x="171.5" y="190.6792">amount: Integer</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="103" x="171.5" y="203.4839">collected: Boolean</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="166.5" x2="279.5" y1="210.0781" y2="210.0781"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="171.5" y="224.2886">(pk) id: Integer</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="94" x="171.5" y="237.0933">(fk) item_id: item</text><!--class item--><rect fill="#F8F8FF" height="78.3828" id="item" style="stroke: #A80036; stroke-width: 1.5;" width="162" x="211" y="8"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="27" x="278.5" y="24.1387">item</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="212" x2="372" y1="31.9688" y2="31.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="73" x="217" y="46.1792">name: String</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="212" x2="372" y1="52.7734" y2="52.7734"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="217" y="66.9839">(pk) id: Integer</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="150" x="217" y="79.7886">(fk) kategoria_id: kategoria</text><!--class category--><rect fill="#F8F8FF" height="65.5781" id="category" style="stroke: #A80036; stroke-width: 1.5;" width="93" x="315.5" y="165"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="55" x="334.5" y="181.1387">category</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="316.5" x2="407.5" y1="188.9688" y2="188.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="73" x="321.5" y="203.1792">name: String</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="316.5" x2="407.5" y1="209.7734" y2="209.7734"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="321.5" y="223.9839">(pk) id: Integer</text><!--class list--><rect fill="#F8F8FF" height="103.9922" id="list" style="stroke: #A80036; stroke-width: 1.5;" width="124" x="6" y="146"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="18" x="59" y="162.1387">list</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="129" y1="169.9688" y2="169.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="73" x="12" y="184.1792">name: String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="58" x="12" y="196.9839">date: Date</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="112" x="12" y="209.7886">completed: Boolean</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="129" y1="216.3828" y2="216.3828"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="12" y="230.5933">(pk) id: Integer</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="110" x="12" y="243.3979">(fk) user_id: Integer</text><!--class listPurchase--><rect fill="#F8F8FF" height="65.5781" id="listPurchase" style="stroke: #A80036; stroke-width: 1.5;" width="106" x="164" y="322.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="77" x="178.5" y="338.6387">listPurchase</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="165" x2="269" y1="346.4688" y2="346.4688"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="165" x2="269" y1="354.4688" y2="354.4688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="78" x="170" y="368.6792">(fk) list_id: list</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="94" x="170" y="381.4839">(fk) item_id: item</text><!--link item to category--><path d="M310.03,86.37 C321.45,110.69 336.06,141.78 346.87,164.8 " fill="none" id="item-category" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="305.5273" y="106.4712">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="335.1038" y="153.9087">1</text><!--link list to user--><path d="M68,250.35 C68,269.63 68,291.38 68,309.99 " fill="none" id="list-user" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="59.4875" y="270.0942">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="60.4641" y="298.9356">*</text><!--link list to listPurchase--><path d="M117.2,250.35 C139.92,274.06 166.2,301.48 186.08,322.24 " fill="none" id="list-listPurchase" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="114.9913" y="270.0942">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="172.3036" y="311.3369">*</text><!--link purchase to listPurchase--><path d="M221.28,243.56 C220.31,268.69 219.12,299.51 218.24,322.29 " fill="none" id="purchase-listPurchase" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="212.4041" y="263.7475">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="210.7951" y="311.3967">*</text><!--link item to purchase--><path d="M274.23,86.37 C264.89,106.55 253.38,131.39 243.65,152.42 " fill="none" id="item-purchase" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="263.5742" y="106.4712">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="238.1995" y="141.3548">1</text><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="273px" preserveAspectRatio="none" style="width:484px;height:273px;" version="1.1" viewBox="0 0 484 273" width="484px" zoomAndPan="magnify"><defs/><g><!--MD5=[e59cf999063292dce8d6ea34dd10a338]
+class user--><rect fill="#F8F8FF" height="91.1875" id="user" style="stroke: #A80036; stroke-width: 1.5;" width="111" x="6" y="8"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="28" x="47.5" y="24.1387">user</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="116" y1="31.9688" y2="31.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="73" x="12" y="46.1792">name: String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="99" x="12" y="58.9839">username: String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="97" x="12" y="71.7886">password: String</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="116" y1="78.3828" y2="78.3828"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="12" y="92.5933">(pk) id: Integer</text><!--MD5=[ac0fd2c9a5e41883b0ab59abbc197956]
+class purchase--><rect fill="#F8F8FF" height="103.9922" id="purchase" style="stroke: #A80036; stroke-width: 1.5;" width="121" x="172" y="159"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="59" x="203" y="175.1387">purchase</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="173" x2="292" y1="182.9688" y2="182.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="90" x="178" y="197.1792">amount: Integer</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="103" x="178" y="209.9839">collected: Boolean</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="173" x2="292" y1="216.5781" y2="216.5781"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="178" y="230.7886">(pk) id: Integer</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="109" x="178" y="243.5933">(fk) item_id: Integer</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="178" y="256.3979">(fk) list_id: Integer</text><!--MD5=[ab11aec9697a155806c72fa29b42d191]
+class item--><rect fill="#F8F8FF" height="78.3828" id="item" style="stroke: #A80036; stroke-width: 1.5;" width="162" x="311.5" y="14.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="27" x="379" y="30.6387">item</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="312.5" x2="472.5" y1="38.4688" y2="38.4688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="73" x="317.5" y="52.6792">name: String</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="312.5" x2="472.5" y1="59.2734" y2="59.2734"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="317.5" y="73.4839">(pk) id: Integer</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="150" x="317.5" y="86.2886">(fk) kategoria_id: kategoria</text><!--MD5=[aa6efeff38892e418e1589090dab265e]
+class category--><rect fill="#F8F8FF" height="65.5781" id="category" style="stroke: #A80036; stroke-width: 1.5;" width="93" x="346" y="178"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="55" x="365" y="194.1387">category</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="347" x2="438" y1="201.9688" y2="201.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="73" x="352" y="216.1792">name: String</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="347" x2="438" y1="222.7734" y2="222.7734"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="352" y="236.9839">(pk) id: Integer</text><!--MD5=[ce0bdc9c9d7363fc59409c686ba93793]
+class list--><rect fill="#F8F8FF" height="91.1875" id="list" style="stroke: #A80036; stroke-width: 1.5;" width="124" x="152.5" y="8"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="18" x="205.5" y="24.1387">list</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="153.5" x2="275.5" y1="31.9688" y2="31.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="73" x="158.5" y="46.1792">name: String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="58" x="158.5" y="58.9839">date: Date</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="112" x="158.5" y="71.7886">completed: Boolean</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="153.5" x2="275.5" y1="78.3828" y2="78.3828"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="158.5" y="92.5933">(pk) id: Integer</text><!--MD5=[476f07cc612f33693e415c3aaf5b969c]
+class userList--><rect fill="#F8F8FF" height="65.5781" id="userList" style="stroke: #A80036; stroke-width: 1.5;" width="108" x="27.5" y="178"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="49" x="57" y="194.1387">userList</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="28.5" x2="134.5" y1="201.9688" y2="201.9688"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="28.5" x2="134.5" y1="209.9688" y2="209.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="96" x="33.5" y="224.1792">(fk) user_id: user</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="78" x="33.5" y="236.9839">(fk) list_id: list</text><!--MD5=[7add71d04f06825b4fd54245351f9da1]
+link item to category--><path d="M392.5,92.54 C392.5,118.7 392.5,153.07 392.5,177.86 " fill="none" id="item-category" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="384.8766" y="112.8746">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="383.7125" y="166.9805">1</text><!--MD5=[51c2150536ba69cf5ec3c4a42677db0b]
+link list to userList--><path d="M176.39,99.06 C154.89,124.19 128.53,155.01 109.05,177.79 " fill="none" id="list-userList" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="161.9419" y="119.2475">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="106.7848" y="166.8967">*</text><!--MD5=[24adc9ffd74b440cc7e743cb39f5a87c]
+link user to userList--><path d="M67.23,99.06 C70.46,124.19 74.43,155.01 77.36,177.79 " fill="none" id="user-userList" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="59.4949" y="119.2475">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="68.8559" y="166.8967">*</text><!--MD5=[25d1b5c360e76face5c75decdac2ec11]
+link item to purchase--><path d="M353.36,92.54 C332.82,112.5 307.37,137.23 285.13,158.85 " fill="none" id="item-purchase" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="338.7648" y="112.8746">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="283.6647" y="147.9109">1</text><!--MD5=[6a2ca4983deeda71e7e8955c6ee91aab]
+link list to purchase--><path d="M219.66,99.06 C221.82,117.73 224.34,139.54 226.58,158.85 " fill="none" id="list-purchase" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="212.9142" y="119.2475">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="217.247" y="147.9109">1</text><!--MD5=[36d0a65b3337599a2a4a4216f8c3b0d6]
 @startuml
 hide circle
 skinparam Shadowing false
@@ -16,7 +27,8 @@ class user {
 
 class purchase {
     (pk) id: Integer
-    (fk) item_id: item
+    (fk) item_id: Integer
+    (fk) list_id: Integer
     amount: Integer
     collected: Boolean
 }
@@ -35,32 +47,87 @@ class category {
 
 class list {
     (pk) id: Integer
-    (fk) user_id: Integer
+    ' (fk) user_id: Integer
     name: String
     date: Date
     completed: Boolean
 }
 
-class listPurchase	{
+class userList	{
+    (fk) user_id: user
     (fk) list_id: list
-    (fk) item_id: item
 }
 
 item "*" - - "1" category
-list "1" - - "*" user
-list "1" - - "*" listPurchase
-purchase "1" - - "*" listPurchase
+' list "1" - - "*" user
+list "1" - - "*" userList
+user "1" - - "*" userList
 item "*" - - "1" purchase
+list "*" - - "1" purchase
 
 @endum
 
-PlantUML version 1.2019.09(Mon Aug 26 19:19:51 EEST 2019)
+@startuml
+hide circle
+skinparam Shadowing false
+skinparam class {
+    backgroundColor GhostWhite
+}
+
+
+class user {
+    (pk) id: Integer
+    name: String
+    username: String
+    password: String
+}
+
+class purchase {
+    (pk) id: Integer
+    (fk) item_id: Integer
+    (fk) list_id: Integer
+    amount: Integer
+    collected: Boolean
+}
+
+
+class item {
+    (pk) id: Integer
+    (fk) kategoria_id: kategoria
+    name: String
+}
+
+class category {
+    (pk) id: Integer
+    name: String
+}
+
+class list {
+    (pk) id: Integer
+    name: String
+    date: Date
+    completed: Boolean
+}
+
+class userList	{
+    (fk) user_id: user
+    (fk) list_id: list
+}
+
+item "*" - - "1" category
+list "1" - - "*" userList
+user "1" - - "*" userList
+item "*" - - "1" purchase
+list "*" - - "1" purchase
+
+@endum
+
+PlantUML version 1.2020.10(Sun May 17 12:35:57 EEST 2020)
 (GPL source distribution)
 Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM
 Java Version: 1.8.0_242-b08
 Operating System: Linux
-OS Version: 5.5.18-3-MANJARO
 Default Encoding: UTF-8
 Language: en
 Country: US

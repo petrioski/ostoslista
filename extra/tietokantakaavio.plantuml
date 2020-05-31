@@ -15,7 +15,8 @@ class user {
 
 class purchase {
     (pk) id: Integer
-    (fk) item_id: item
+    (fk) item_id: Integer
+    (fk) list_id: Integer
     amount: Integer
     collected: Boolean
 }
@@ -34,21 +35,21 @@ class category {
 
 class list {
     (pk) id: Integer
-    (fk) user_id: Integer
+    ' (fk) user_id: Integer
     name: String
     date: Date
     completed: Boolean
 }
 
-class listPurchase	{
+class userList	{
+    (fk) user_id: user
     (fk) list_id: list
-    (fk) item_id: item
 }
 
 item "*" -- "1" category
-list "1" -- "*" user
-list "1" -- "*" listPurchase
-purchase "1" -- "*" listPurchase
+list "1" -- "*" userList
+user "1" -- "*" userList
 item "*" -- "1" purchase
+list "*" -- "1" purchase
 
 @endum
