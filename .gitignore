@@ -140,3 +140,4 @@ cython_debug/
 # paikalliset tiedostot
 ostoslista.db
 todo.md
+.vscode/
