@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <table>
+    <tr>
+      <td><a href="{{ url_for('create_item') }}"><h5>Lisää tuote</h5></a></td>
+    </tr>
+    <tr>
+      <th>Tuote</th>
+      <th>Id</th>
+      <th>Mittayksikkö</th>
+      <th>kategoria</th>
+      <th>Päivitetty</th>
+      <th></th>
+    </tr>
+    {% for item in items %}
+    <tr>
+      <td>{{ item.name}} </td>
+      <td>{{ item.id}} </td>
+      <td>{{ item.unit_type}} </td>
+      <td>{{ item.category.name }}</td>
+      <td>{{ item.date_modified}} </td>
+      <td>
+        <form method="GET" action="{{ url_for('update_item', item_id=item.id) }}">
+          <input type="submit" value="Päivitä"/>
+        </form>
+      </td>
+      <td>
+        <form method="POST" action="{{ url_for('delete_item', item_id=item.id) }}">
+          <input type="submit" value="Poista"/>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

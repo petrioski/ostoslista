@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<form method="POST" action="{{ url_for('create_item') }}">
+  <table>
+    <tr>
+      <td>
+        {{ form.name.label }}
+      </td>
+      <td>
+        {{ form.name }}
+      </td>
+      <td>
+        <ul>
+          {% for error in form.name.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{ form.unit_type.label }}
+      </td>
+      <td>
+        {{ form.unit_type}}
+    </td>
+    </tr>
+    <tr>
+      <td>
+        {{ form.category.label }}
+      </td>
+      <td>
+        {{ form.category}}
+    </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <input type="submit" value="Lisää tuote"/>
+      </td>
+    </tr>
+</form>
+{% endblock %}
