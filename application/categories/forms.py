@@ -1,8 +1,8 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField
+from wtforms import StringField, validators
 
-class TaskForm(FlaskForm):
-    name = StringField("Category name")
+class CreateNewCategoryForm(FlaskForm):
+    name = StringField("Tuotekategoria:", [validators.Length(min=3)])
 
     class Meta:
         csrf = False
