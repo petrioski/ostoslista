@@ -8,8 +8,9 @@ class User(Base):
     name = db.Column(db.String(144), nullable=False)
     username = db.Column(db.String(144), nullable=False)
     password = db.Column(db.String(144), nullable=False)
+    shopping_lists = db.relationship("List", secondary="user_list")
 
-    tasks = db.relationship("List", backref='account', lazy=True)
+    #tasks = db.relationship("List", backref='account', lazy=True)
 
     def __init__(self, name, username, password):
         self.name = name
