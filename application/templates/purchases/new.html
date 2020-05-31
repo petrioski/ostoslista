@@ -1,0 +1,29 @@
+
+<form method="POST" action="{{ url_for('create_purchase', list_id = list_id, add_mode=add_mode) }}">
+    <tr>
+      <td>
+        {{ form.name.label }}
+      </td>
+      <td>
+        {{ form.name}}
+      </td>
+      <td>
+        <ul>
+          {% for error in form.name.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{ form.amount.label }}
+      </td>
+      <td>
+        {{ form.amount}}
+      </td>
+      <td colspan="3">
+        <input type="submit" value="Lisää tuote"/>
+      </td>
+    </tr>
+</form>

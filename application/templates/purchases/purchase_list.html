@@ -1,0 +1,26 @@
+
+  <table>
+    <tr>
+      <th>kategoria</th>
+      <th>Tuote</th>
+      <th>Id</th>
+      <th>Määrä</th>
+      <th>Löytynyt</th>
+    </tr>
+    {% for purchase in purchases %}
+    <tr>
+      <td>{{ purchase.item.category.name}} </td>
+      <td>{{ purchase.item.name }}</td>
+      <td>{{ purchase.id}} </td>
+      <td>{{ purchase.amount}}  {{ purchase.item.unit_type }} </td>
+      <td>{{ purchase.collected}} </td>
+      <!-- <td>{{ purchase.list_id}} </td> -->
+      <td>
+        <form method="POST" action="{{ url_for('delete_purchase', list_id=purchase.list_id, purchase_id=purchase.id, add_mode=add_mode) }}">
+          <input type="submit" value="Poista"/>
+        </form>
+      </td>
+
+    </tr>
+    {% endfor %}
+  </table>

@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+{% include "purchases/new.html" %}
+
+<td><a href="{{ url_for('purchases_index', list_id = list_id, add_mode=0) }}"><h5>Lopeta lisäys</h5></a></td>
+
+{% include "purchases/purchase_list.html" %}
+
+{% endblock %}
