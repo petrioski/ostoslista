@@ -27,11 +27,13 @@ from application.categories import models
 from application.lists import models
 from application.auth import models
 from application.purchases import models
-from application.purchases import listPurchase
+from application.lists import user_list
 
 from application.categories import views
 from application.lists import views
 from application.auth import views
+from application.items import views
+from application.purchases import views
 
 # kirjautuminen
 from application.auth.models import User
