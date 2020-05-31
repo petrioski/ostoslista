@@ -141,3 +141,4 @@ cython_debug/
 ostoslista.db
 todo.md
 .vscode/
+populate_db.txt
