@@ -18,6 +18,7 @@ class Category(Base):
                   LEFT JOIN item as b
                     ON a.id = b.category_id
                   GROUP BY a.name, a.id
+                  ORDER BY COUNT(b.id) DESC, a.name
                 """
         res = db.engine.execute(stmt)
 
