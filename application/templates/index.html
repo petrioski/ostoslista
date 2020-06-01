@@ -2,6 +2,7 @@
 
 {% block body %}
   <p>
-    Hello world!
+          <a href="{{ url_for('auth_login') }}">Kirjaudu</a> sisään tai
+          <a href="{{ url_for('auth_sign_up') }}">rekisteröidy</a>
   </p>
 {% endblock %}
