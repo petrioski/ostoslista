@@ -6,7 +6,9 @@
 
 1. Päivitä tarvittaessa pip komennolla `pip install --upgrade pip` ja lataa virtuaaliympäristöön sovelluksen tarvitsemat riippuvuudet komennolla `pip install -r requirements.txt`.
 
-1. Käynnistä lopuksi sovellus komennolla `python run.py` ja mene selaimella osoitteeseen http://127.0.0.1:5000/
+1. Käynnistä lopuksi sovellus komennolla `python run.py`
+
+1. Löydät nyt sovelluksen osoitteesta http://127.0.0.1:5000/
 
 ## Heroku-asennus
 
@@ -32,3 +34,5 @@ Suorita vaiheet 1 ja 2 kuten paikallisessa asennuksessa on kuvattu. Sovelluksess
     INSERT INTO account (name, username, password) VALUES ('hello world', 'hello', 'world');
     \q
     ```
+
+1. Löydät sovelluksen nyt osoitteesta `https://<sovelluksen-nimi>.herokuapp.com/`

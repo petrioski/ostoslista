@@ -21,6 +21,6 @@ salasana: `world`
 
 ## Asennusohjeet
 
-[Paikallinen asennus](documentation/ohjeistus.md#paikallinen-asennus)
+[Paikallinen asennus](documentation/asennusohjeistus.md#paikallinen-asennus)
 
-[Heroku-asennus](documentation/ohjeistus.md#heroku-asennus)
+[Heroku-asennus](documentation/asennusohjeistus.md#heroku-asennus)
