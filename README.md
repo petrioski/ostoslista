@@ -15,6 +15,12 @@ Harjoitustyön aiheena on yksinkertainen ostoslista, jossa käyttäjä voi luoda
 
 ## Demo-tunnukset
 
-käyttäjänimi: hello
+käyttäjänimi: `hello`
 
-salasana: world
+salasana: `world`
+
+## Asennusohjeet
+
+[Paikallinen asennus](documentation/ohjeistus.md#paikallinen-asennus)
+
+[Heroku-asennus](documentation/ohjeistus.md#heroku-asennus)
