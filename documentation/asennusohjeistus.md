@@ -12,7 +12,7 @@
 
 ## Heroku-asennus
 
-Suorita vaiheet 1 ja 2 kuten paikallisessa asennuksessa on kuvattu. Sovelluksessa on riippuvuuksissa mukana Herokun tarvitsemat komponentit, joten
+Suorita vaiheet 1 ja 2 kuten paikallisessa asennuksessa on kuvattu. Sovelluksessa on riippuvuuksissa mukana Herokun tarvitsemat komponentit, joten sinun tarvitsee vain luoda sovellukselle osoite ja ensimmäinen käyttäjä herokuun seuraavasti:
 
 1. Jos sinulla ei ole vielä Herokun komentorivi-työkalua käytössäsi, niin lataa se [täältä](https://devcenter.heroku.com/articles/heroku-cli) löytyvien ohjeiden mukaan
 
