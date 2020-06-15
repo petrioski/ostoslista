@@ -13,7 +13,7 @@ def auth_login():
         return render_template("auth/loginform.html", form=LoginForm())
 
     form = LoginForm(request.form)
-    # mahdolliset validoinnit
+
     if request.method == "POST" and not form.validate_on_submit():
         return render_template("auth/loginform.html", form=form)
 
@@ -52,6 +52,13 @@ def auth_sign_up():
     username = form.username.data
     password = form.password.data
     new_user = User(name, username, password)
+
+    existing_user = User.query.filter_by(username=username).first()
+
+    if existing_user is not None:
+        return render_template(
+            "auth/signup.html", form=form, extra_error="Käyttäjänimi varattu"
+        )
 
     db.session().add(new_user)
     db.session().commit()

@@ -3,17 +3,11 @@ from wtforms import StringField, validators, SelectField
 
 
 class CreateNewItemForm(FlaskForm):
-    name = StringField("Tuotteen nimi", [validators.Length(min=3)])
-    unit_type = StringField("Mittayksikkö", [validators.Length(min=3)])
+    name = StringField("Tuotteen nimi", [validators.Length(min=3, max=500)])
+    unit_type = StringField(
+        "Mittayksikkö", [validators.Length(min=3, max=144)]
+    )
     category = SelectField("Kategoria", coerce=int)
 
     class Meta:
         csrf = False
-
-
-# class UpdateShoppingListForm(FlaskForm):
-#     name = StringField("List name", [validators.Length(min=3)])
-#     # done = BooleanField("Valmis")
-
-#     class Meta:
-#         csrf = False
