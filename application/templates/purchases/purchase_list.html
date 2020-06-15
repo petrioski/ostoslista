@@ -1,26 +1,49 @@
 
   <table>
     <tr>
-      <th>kategoria</th>
-      <th>Tuote</th>
-      <th>Id</th>
-      <th>Määrä</th>
-      <th>Löytynyt</th>
+      <!-- <th></th> -->
+      <!-- <th>Tuote</th> -->
+      <!-- <th>Id</th> -->
+      <!-- <th>Määrä</th> -->
+      <!-- <th>Löytynyt</th> -->
     </tr>
-    {% for purchase in purchases %}
+    {% for cat in categories %}
+    <th>{{ cat }}</th>
     <tr>
-      <td>{{ purchase.item.category.name}} </td>
-      <td>{{ purchase.item.name }}</td>
-      <td>{{ purchase.id}} </td>
-      <td>{{ purchase.amount}}  {{ purchase.item.unit_type }} </td>
-      <td>{{ purchase.collected}} </td>
-      <!-- <td>{{ purchase.list_id}} </td> -->
-      <td>
-        <form method="POST" action="{{ url_for('delete_purchase', list_id=purchase.list_id, purchase_id=purchase.id, add_mode=add_mode) }}">
-          <input type="submit" value="Poista"/>
-        </form>
-      </td>
+    {% for purchase in purchases %}
+      {% if purchase.item.category.name == cat %}
+      <tr>
+        <!-- <td>{{ purchase.item.category.name}} </td> -->
+        <!-- <td></td> -->
+        <td>&ensp;
+            {% if purchase.collected %}<del> {% endif %}
+             {{ purchase.item.name }}
+            {% if purchase.collected %}</del> {% endif %}
+        </td>
+        <!-- <td>{{ purchase.id}} </td> -->
+        <td>
+            {% if purchase.collected %}<del> {% endif %}
+              {{ purchase.amount}}  {{ purchase.item.unit_type }}
+            {% if purchase.collected %}</del> {% endif %}
+        </td>
+        <!-- <td>{{ purchase.collected}} </td> -->
+        <!-- <td>{{ purchase.list_id}} </td> -->
+        <td>
+          {% if add_mode == '1' %}
+            <form method="POST" action="{{ url_for('delete_purchase', list_id=purchase.list_id, purchase_id=purchase.id, add_mode=add_mode) }}">
+              <input type="submit" value="Poista"/>
+            </form>
+          {% else %}
+            <form method="POST" action="{{ url_for('collect_purchase', list_id=purchase.list_id, purchase_id=purchase.id, add_mode=add_mode) }}">
+              <input type="submit" value="Löytynyt"/>
+            </form>
+          {% endif %}
+        </td>
 
+      </tr>
+      {% endif %}
+    {% endfor %}
     </tr>
     {% endfor %}
+
   </table>

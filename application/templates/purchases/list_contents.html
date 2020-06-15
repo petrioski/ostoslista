@@ -4,7 +4,11 @@
 {% block body %}
 
 
-<td><a href="{{ url_for('create_purchase', list_id = list_id, add_mode = 1) }}"><h5>Lisää tuote</h5></a></td>
+<td>
+    <a href="{{ url_for('create_purchase', list_id = list_id, add_mode = 1) }}">
+        <h5>Lisää tai poista ostoksia</h5>
+    </a>
+</td>
 
 {% include "purchases/purchase_list.html" %}
 
