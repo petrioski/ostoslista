@@ -6,9 +6,10 @@
 * Käyttäjä voi luoda uuden ostolistan
 * käyttäjä voi poistaa ostoslistan
 * Käyttäjä voi lisätä tuotteen listalle
-* käyttäjä voi poistaan tuotteen listalta
-* käyttäjä voi muokata tuotteen nimeä ostoslistalla
+* käyttäjä voi poistaa tuotteen listalta
 * käyttäjä voi merkitä tuotteen ostetuksi (löydetyksi)
 * käyttäjä voi lisätä kategorian tuotteelle
-* käyttäjä voi muokata kategorioiden järjestystä
 * käyttäjä voi tarkastella yhteenvetotilastoja ostoshistoriastaan
+
+* käyttäjä voi muokata tuotteen nimeä ostoslistalla
+* käyttäjä voi muokata kategorioiden järjestystä
