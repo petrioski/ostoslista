@@ -1,6 +1,7 @@
 from flask import redirect, render_template, request, url_for
 from flask_login import login_required
 from sqlalchemy.sql import text
+import os
 
 from application import app
 from application import db
@@ -33,9 +34,13 @@ def get_all_purchases(list_id):
 
 
 def get_categories(purchase_list):
-    unique_categories = set()
-    categories = []
+    if os.environ.get("HEROKU"):
+        return get_postgres_categories(purchase_list)
+    else:
+        return get_sqlite_categories(purchase_list)
 
+
+def get_postgres_categories(purchase_list):
     ids = [p.item_id for p in purchase_list]
     stmt = text(
         "SELECT category.name "
@@ -45,18 +50,17 @@ def get_categories(purchase_list):
         " WHERE item.id = ANY(:id) "
         " GROUP BY category.name "
     ).params(id=ids)
-    print(f"tämä on tulos ------------> {stmt}")
-    print(stmt.compile())
-    # print(bind_params)
+
     res = db.engine.execute(stmt)
 
+    categories = []
     for row in res:
         categories.append(row[0])
 
     return categories
 
 
-def get_categories2(purchase_list):
+def get_sqlite_categories(purchase_list):
     unique_categories = set()
     categories = []
 
