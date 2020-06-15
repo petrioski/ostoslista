@@ -48,10 +48,10 @@ def get_categories(purchase_list):
     print(f"tämä on tulos ------------> {stmt}")
     print(stmt.compile())
     # print(bind_params)
-    res = db.engine.execute(stmt).first()
-    if not res[0] in unique_categories:
-        categories.append(res[0])
-        unique_categories.add(res[0])
+    res = db.engine.execute(stmt).all()
+
+    for row in res:
+        categories.append(row[0])
 
     return categories
 
