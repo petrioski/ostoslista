@@ -1,0 +1,68 @@
+td {
+    padding: 2px 5px;
+    max-width: 15em;
+}
+
+.table-max {
+    max-width: 200em;
+}
+
+.category {
+    padding-top: 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.not-collected {
+    padding-left: 10px;
+}
+
+.collected {
+    text-decoration: line-through;
+    color: darkgrey;
+    padding-left: 10px;
+}
+
+.collected-amount {
+    text-decoration: line-through;
+    color: darkgrey;
+}
+
+.button, .update-button {
+    background-color: #00cc99; /* Green */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 5px ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    min-width: 80px;
+
+}
+
+.delete-button {
+    background-color: #ff5050; /* Green */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 5px ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    min-width: 80px;
+}
+
+.button-undo {
+    background-color: #668b99;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 5px ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    min-width: 80px;
+}

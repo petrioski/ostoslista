@@ -1,41 +1,37 @@
 
   <table>
-    <tr>
-      <!-- <th></th> -->
-      <!-- <th>Tuote</th> -->
-      <!-- <th>Id</th> -->
-      <!-- <th>Määrä</th> -->
-      <!-- <th>Löytynyt</th> -->
-    </tr>
     {% for cat in categories %}
-    <th>{{ cat }}</th>
-    <tr>
-    {% for purchase in purchases %}
+    <th class="category" colspan="2">{{ cat }}</th>
+      <tr>
+      {% for purchase in purchases %}
       {% if purchase.item.category.name == cat %}
       <tr>
-        <!-- <td>{{ purchase.item.category.name}} </td> -->
-        <!-- <td></td> -->
-        <td>&ensp;
-            {% if purchase.collected %}<del> {% endif %}
+          {% if purchase.collected %}
+            <td class="collected">
+          {% else %}
+            <td class="not-collected">
+          {% endif %}
              {{ purchase.item.name }}
-            {% if purchase.collected %}</del> {% endif %}
-        </td>
-        <!-- <td>{{ purchase.id}} </td> -->
-        <td>
-            {% if purchase.collected %}<del> {% endif %}
+            </td>
+          {% if purchase.collected %}
+            <td class="collected-amount">
+          {% else %}
+            <td>
+          {% endif %}
               {{ purchase.amount}}  {{ purchase.item.unit_type }}
-            {% if purchase.collected %}</del> {% endif %}
         </td>
-        <!-- <td>{{ purchase.collected}} </td> -->
-        <!-- <td>{{ purchase.list_id}} </td> -->
         <td>
           {% if add_mode == '1' %}
             <form method="POST" action="{{ url_for('delete_purchase', list_id=purchase.list_id, purchase_id=purchase.id, add_mode=add_mode) }}">
-              <input type="submit" value="Poista"/>
+              <input class="delete-button" type="submit" value="Poista"/>
             </form>
           {% else %}
             <form method="POST" action="{{ url_for('collect_purchase', list_id=purchase.list_id, purchase_id=purchase.id, add_mode=add_mode) }}">
-              <input type="submit" value="Löytynyt"/>
+              {% if not purchase.collected %}
+                <input class="button" type="submit" value="Löytyi!"/>
+              {% else %}
+                <input class="button-undo" type="submit" value="Eiku"/>
+              {% endif %}
             </form>
           {% endif %}
         </td>

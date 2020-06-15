@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Ostoslista-sovellus</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/customisations.css">
   </head>
 
   <body>
@@ -14,11 +15,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-          <!-- <li class="nav-item"><a class="nav-link" href="{{ url_for('lists_index') }}">Ostoslistat </a></li> -->
-          <!-- <li class="nav-item"><a class="nav-link" href="{{ url_for('lists_form') }}">Uusi lista</a></li> -->
           <li class="nav-item"><a class="nav-link" href="{{ url_for('items_index') }}">Tuotteet</a></li>
           <li class="nav-item"><a class="nav-link" href="{{ url_for('categories_index') }}">Tuotekategoriat</a></li>
-          <!-- <li class="nav-item"><a class="nav-link" href="{{ url_for('categories_form') }}">Uusi kategoria</a></li> -->
         </ul>
 
 
@@ -31,15 +29,6 @@
         </div>
       </div>
     </nav>
-
-
-    <!-- {% if current_user.is_authenticated %}
-    <p>
-      Kirjautunut nimellä {{ current_user.name }}. <a href="{{ url_for('auth_logout') }}">Kirjaudu ulos</a>
-    </p>
-    {% else %}
-    <a href="{{ url_for('auth_login') }}">Kirjaudu</a>
-    {% endif %} -->
 
 
     <main role="main" class="container">

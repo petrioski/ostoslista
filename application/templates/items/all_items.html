@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block body %}
-  <table>
+  <table class="table-max">
     <tr>
       <td><a href="{{ url_for('create_item') }}"><h5>Lisää tuote</h5></a></td>
     </tr>
@@ -22,12 +22,12 @@
       <td>{{ item.date_modified}} </td>
       <td>
         <form method="GET" action="{{ url_for('update_item', item_id=item.id) }}">
-          <input type="submit" value="Päivitä"/>
+          <input class="update-button" type="submit" value="Päivitä"/>
         </form>
       </td>
       <td>
         <form method="POST" action="{{ url_for('delete_item', item_id=item.id) }}">
-          <input type="submit" value="Poista"/>
+          <input class="delete-button" type="submit" value="Poista"/>
         </form>
       </td>
     </tr>

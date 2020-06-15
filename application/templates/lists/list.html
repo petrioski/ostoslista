@@ -20,19 +20,14 @@
       <td><a href="{{ url_for('lists_set_done', list_id=list.id) }}">{{ list.done }}</a></td>
       <td>{{ list.account_id}} </td>
       <td>{{ list.date_modified}} </td>
-      <!-- <td>
-        <form method="POST" action="{{ url_for('lists_set_done', list_id=list.id) }}">
-          <input type="submit" value="Valmis?"/>
-        </form>
-      </td> -->
       <td>
         <form method="GET" action="{{ url_for('lists_update_x', list_id=list.id) }}">
-          <input type="submit" value="Päivitä"/>
+          <input class="update-button" type="submit" value="Päivitä"/>
         </form>
       </td>
       <td>
         <form method="POST" action="{{ url_for('delete_list', list_id=list.id) }}">
-          <input type="submit" value="Poista"/>
+          <input class="delete-button" type="submit" value="Poista"/>
         </form>
       </td>
     </tr>

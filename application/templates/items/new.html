@@ -25,6 +25,11 @@
       <td>
         {{ form.unit_type}}
     </td>
+        <ul>
+          {% for error in form.unit_type.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
     </tr>
     <tr>
       <td>
@@ -33,10 +38,15 @@
       <td>
         {{ form.category}}
     </td>
+        <ul>
+          {% for error in form.category.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
     </tr>
     <tr>
       <td colspan="3">
-        <input type="submit" value="Lisää tuote"/>
+        <input class="button" type="submit" value="Lisää tuote"/>
       </td>
     </tr>
 </form>
