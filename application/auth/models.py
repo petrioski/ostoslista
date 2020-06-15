@@ -1,6 +1,7 @@
 from application import db
 from application.models import Base
 
+
 class User(Base):
 
     __tablename__ = "account"
@@ -8,14 +9,14 @@ class User(Base):
     name = db.Column(db.String(144), nullable=False)
     username = db.Column(db.String(144), nullable=False)
     password = db.Column(db.String(144), nullable=False)
+    role = db.Column(db.String(144), nullable=False)
     shopping_lists = db.relationship("List", secondary="user_list")
 
-    #tasks = db.relationship("List", backref='account', lazy=True)
-
-    def __init__(self, name, username, password):
+    def __init__(self, name, username, password, role="basic"):
         self.name = name
         self.username = username
         self.password = password
+        self.role = role
 
     def get_id(self):
         return self.id
@@ -28,3 +29,6 @@ class User(Base):
 
     def is_authenticated(self):
         return True
+
+    def roles(self):
+        return self.role
