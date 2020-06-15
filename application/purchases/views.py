@@ -48,7 +48,7 @@ def get_categories(purchase_list):
     print(f"tämä on tulos ------------> {stmt}")
     print(stmt.compile())
     # print(bind_params)
-    res = db.engine.execute(stmt).all()
+    res = db.engine.execute(stmt)
 
     for row in res:
         categories.append(row[0])
