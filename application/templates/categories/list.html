@@ -13,6 +13,13 @@
       <td>{{ category.name }}</td>
       <td>{{ category.id }}</td>
       <td>{{ category.item_count}}</td>
+      {% if admin %}
+      <td>
+        <form method="POST" action="{{ url_for('delete_category', category_id=category.id) }}">
+          <input class="delete-button" type="submit" value="Poista"/>
+        </form>
+      </td>
+      {% endif %}
     </tr>
     {% endfor %}
   </table>
