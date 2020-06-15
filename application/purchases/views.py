@@ -36,6 +36,30 @@ def get_categories(purchase_list):
     unique_categories = set()
     categories = []
 
+    ids = [p.item_id for p in purchase_list]
+    stmt = text(
+        "SELECT category.name "
+        " FROM item "
+        " LEFT JOIN category "
+        "  ON item.category_id = category.id "
+        " WHERE item.id = ANY(:id) "
+        " GROUP BY category.name "
+    ).params(id=ids)
+    print(f"tämä on tulos ------------> {stmt}")
+    print(stmt.compile())
+    # print(bind_params)
+    res = db.engine.execute(stmt).first()
+    if not res[0] in unique_categories:
+        categories.append(res[0])
+        unique_categories.add(res[0])
+
+    return categories
+
+
+def get_categories2(purchase_list):
+    unique_categories = set()
+    categories = []
+
     for i in purchase_list:
         stmt = text(
             "SELECT category.name "
@@ -44,6 +68,7 @@ def get_categories(purchase_list):
             " ON item.category_id = category.id "
             "WHERE item.id = :id"
         ).params(id=i.item_id)
+
         res = db.engine.execute(stmt).first()
         if not res[0] in unique_categories:
             categories.append(res[0])
