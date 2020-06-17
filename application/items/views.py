@@ -7,14 +7,11 @@ from application.items.models import Item
 from application.categories.models import Category
 from application.items.forms import CreateNewItemForm
 
-# TODO: formi itemille
-
 
 @app.route("/items")
 @login_required
 def items_index():
     return render_template("items/all_items.html", items=Item.query.all())
-    # return render_template("items/all_items.html")
 
 
 @app.route("/items/add", methods=["GET", "POST"])
@@ -37,6 +34,7 @@ def create_item():
 
     return redirect(url_for("items_index"))
 
+
 @app.route("/items/update/<item_id>/", methods=["GET", "POST"])
 @login_required
 def update_item(item_id):
@@ -50,7 +48,6 @@ def update_item(item_id):
     if request.method == "GET":
         form.name.data = old_item.name
         form.unit_type.data = old_item.unit_type
-        # TODO: jos mahdollista, niin miten valita vanha arvo (id:n syöttö tuhoaa valikon)
         return render_template("/items/update.html", form=form, item=old_item)
 
     if request.method == "POST" and not form.validate_on_submit():

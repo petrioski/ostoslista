@@ -10,7 +10,6 @@ class Item(Base):
         db.Integer, db.ForeignKey("category.id"), nullable=False
     )
     purchases = db.relationship("Purchase", backref="item", lazy=True)
-    # category = db.relationship("category")
 
     def __init__(self, name):
         self.name = name

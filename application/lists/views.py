@@ -40,7 +40,6 @@ def lists_set_done(list_id):
     return redirect(url_for("lists_index"))
 
 
-# TODO
 @app.route("/lists/add/<list_id>/", methods=["GET", "POST"])
 @login_required
 def lists_add_items(list_id):
@@ -67,7 +66,6 @@ def create_list():
     return redirect(url_for("lists_index"))
 
 
-# TODO: update list name
 @app.route("/lists/update/<list_id>/", methods=["GET", "POST"])
 @login_required
 def lists_update_x(list_id):
