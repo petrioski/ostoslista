@@ -9,7 +9,12 @@ class List(Base):
     account_id = db.Column(
         db.Integer, db.ForeignKey("account.id"), nullable=False
     )
-    purchases = db.relationship("Purchase", backref="list", lazy=True)
+    purchases = db.relationship(
+        "Purchase",
+        cascade="all, delete",
+        backref="list",
+        lazy=True,
+    )
 
     def __init__(self, name):
         self.name = name
