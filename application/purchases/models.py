@@ -4,7 +4,7 @@ from sqlalchemy.sql import text
 
 
 class Purchase(Base):
-    amount = db.Column(db.Integer, nullable=False)
+    amount = db.Column(db.Float, nullable=False)
     collected = db.Column(db.Boolean, nullable=False)
     item_id = db.Column(db.Integer, db.ForeignKey("item.id"), nullable=False)
     list_id = db.Column(
