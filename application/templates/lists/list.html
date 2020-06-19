@@ -7,18 +7,14 @@
     </tr>
     <tr>
       <th>Ostoslista</th>
-      <th>Id</th>
       <th>Completed</th>
-      <th>Owner id</th>
       <th>Päivitetty</th>
       <th></th>
     </tr>
     {% for list in lists %}
     <tr>
       <td><a href="{{ url_for('purchases_index', list_id=list.id, add_mode=0) }}">{{ list.name }}</a></td>
-      <td>{{ list.id}} </td>
       <td><a href="{{ url_for('lists_set_done', list_id=list.id) }}">{{ list.done }}</a></td>
-      <td>{{ list.account_id}} </td>
       <td>{{ list.date_modified}} </td>
       <td>
         <form method="GET" action="{{ url_for('lists_update_x', list_id=list.id) }}">
