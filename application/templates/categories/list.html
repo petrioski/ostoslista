@@ -5,13 +5,11 @@
       <td><a href="{{ url_for('create_category') }}"><h5>Lisää kategoria</h5></a></td>
     <tr>
       <th>Tuotekategoria</th>
-      <th>Id</th>
       <th>Tuotteiden määrä</th>
     </tr>
     {% for category in categories %}
     <tr>
       <td>{{ category.name }}</td>
-      <td>{{ category.id }}</td>
       <td>{{ category.item_count}}</td>
       {% if admin %}
       <td>
