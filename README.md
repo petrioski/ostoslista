@@ -7,7 +7,9 @@ Harjoitustyön aiheena on yksinkertainen ostoslista, jossa käyttäjä voi luoda
 ## Dokumentaatio
 
 [Käyttötapaukset](documentation/user_stories.md)
+[SQL-kyselyt käyttötapauksiin](documentation/user_stories_queries.md)
 [Tietokantakaavio](documentation/schema.md)
+[Taulujen luontilauseet](documentation/create_tables.md)
 
 ## Heroku
 
