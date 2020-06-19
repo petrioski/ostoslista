@@ -67,7 +67,14 @@ def create_purchase(list_id, add_mode):
         )
 
     if request.method == "POST" and not form.validate_on_submit():
-        return render_template("/purchases/add_purchases.html", form=form)
+        return render_template(
+            "/purchases/add_purchases.html",
+            form=form,
+            list_id=list_id,
+            categories=categories,
+            purchases=all_purchases,
+            add_mode=add_mode,
+        )
 
     new_item = Purchase(form.amount.data)
     new_item.item_id = form.name.data
@@ -119,11 +126,12 @@ def collect_purchase(list_id, purchase_id, add_mode):
         url_for("purchases_index", list_id=list_id, add_mode=add_mode)
     )
 
+
 @app.route("/user_stats", methods=["GET"])
 @login_required
 def purchase_stats_index():
 
     return render_template(
         "purchases/purchase_history.html",
-        purchases=Purchase.get_purchase_history(user_id=current_user.id)
+        purchases=Purchase.get_purchase_history(user_id=current_user.id),
     )
