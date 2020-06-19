@@ -57,3 +57,28 @@ class Purchase(Base):
                 unique_categories.add(res[0])
 
         return categories
+
+    @staticmethod
+    def get_purchase_history(user_id):
+        stmt = text("""
+                SELECT item.name, count(purchase.id) as purchase_times
+                FROM purchase
+                LEFT JOIN item
+                    ON purchase.item_id = item.id
+                LEFT JOIN list
+                    ON purchase.list_id = list.id
+                WHERE
+                    list.account_id = :id
+                GROUP BY
+                    item.name
+                ORDER BY count(purchase.id) DESC
+                """).params(id=user_id)
+        res = db.engine.execute(stmt)
+        response = list()
+
+        for row in res:
+            response.append(
+                {"name": row[0], "purchase_count": row[1]}
+            )
+
+        return response

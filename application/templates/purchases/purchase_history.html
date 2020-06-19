@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <table class="table-max">
+    <tr>
+      <th>Tuote</th>
+      <th>Ostokerrat</th>
+    </tr>
+    {% for purchase in purchases %}
+    <tr>
+      <td>{{ purchase.name}} </td>
+      <td>{{ purchase.purchase_count}} </td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

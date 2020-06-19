@@ -1,5 +1,5 @@
 from flask import redirect, render_template, request, url_for
-from flask_login import login_required
+from flask_login import login_required, current_user
 import os
 
 from application import app
@@ -117,4 +117,13 @@ def collect_purchase(list_id, purchase_id, add_mode):
 
     return redirect(
         url_for("purchases_index", list_id=list_id, add_mode=add_mode)
+    )
+
+@app.route("/user_stats", methods=["GET"])
+@login_required
+def purchase_stats_index():
+
+    return render_template(
+        "purchases/purchase_history.html",
+        purchases=Purchase.get_purchase_history(user_id=current_user.id)
     )
