@@ -1,10 +1,10 @@
 from flask_wtf import FlaskForm
-from wtforms import IntegerField, validators, SelectField
+from wtforms import DecimalField, validators, SelectField
 
 
 class AddNewPurchaseForm(FlaskForm):
     name = SelectField("Tuote", coerce=int)
-    amount = IntegerField(
+    amount = DecimalField(
         "Määrä", default=1, validators=[validators.required()]
     )
 
