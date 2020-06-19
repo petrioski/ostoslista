@@ -41,3 +41,7 @@ Uudet lisätään 'Lisää tuote' -linkin kautta löytyvästä lomakkeesta. Jos 
 ## Kategoriat
 
 Kategoriat-sivulla on näkyvissä kaikki tuotekategoriat ja niitä voi lisätä sivun yläreunassa yläpalkin alapuolella olevasta linkistä.
+
+## Ostoshistoria
+
+Yläpalkin ostoshistoria-linkistä pääsee katsomaan käyttäjän omaa ostoshistoriaa. Tuotteista, jotka käyttäjä on lisännyt ostoslistoilleen näytetään kuinka monta kertaa ne esiintyvät. Lista on järjestetty laskevaan järjestykseen.
