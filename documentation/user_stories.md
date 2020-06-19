@@ -1,5 +1,9 @@
 # Harjoitustyön toiminnallisuudet
 
+## oleellisimmat käyttäjäryhmät
+Oleellisimmat käyttäjäryhmät ovat 'ADMIN'-käyttäjät, joilla on oikeudet poistaa tuotekategorioita ja sitten 'basic'-käyttäjät, jotka ovat kaikki muut käyttäjät.
+
+## toteutetut toiminnallisuudet
 * ostolista-sovelluksella on useampia käyttäjiä
 * uusi käyttäjä voi luoda käyttäjätunnuksen
 * käyttäjä voi kirjautua sisään ja ulos sovelluksesta
@@ -20,3 +24,6 @@
 * käyttäjä voi muokata tuotteen nimeä ostoslistalla
 * käyttäjä voi muokata kategorioiden järjestystä omien mieltymysten mukaan
 * käyttäjät voivat tehdä tiimejä, joissa listat näkyy kaikilla tiimiläisillä
+* javascriptiin perustuvat toiminnallisuudet, kuten responsiivinen haku
+* tietoturvan parannukset, kuten bcyptin käyttö salasanojen kryptattuun tallennukseen
+* mobiilioptimoinnit
